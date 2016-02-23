@@ -1,0 +1,196 @@
+/********************************************************************************************/
+/* Go
+/********************************************************************************************/
+li[data-type="media"] .wrapper ol.data
+{
+	text-align:center;
+	position:relative;
+}
+li[data-type="media"] .wrapper ol.data li
+{
+	display:inline-block;
+	margin:5px;
+	width:160px;
+	color:#ddd;
+	position:relative;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	vertical-align:top;
+}
+li[data-type="media"] .wrapper ol.data li:not(.upload)
+{
+	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	background:#F0F0F0;
+}
+li[data-type="media"] .wrapper ol.data li .delete
+{
+	position:absolute;
+	top:5px;
+	right:5px;
+	z-index:3;
+}
+li[data-type="media"] .wrapper ol.data li:hover .delete
+{
+	display:block;
+}
+
+/********************************************************************************************/
+/* Upload */
+/********************************************************************************************/
+li[data-type="media"] .wrapper ol.data li.upload
+{
+	height:160px;
+	line-height:160px;
+	border:1px dashed #ddd;
+	-webkit-transition: all .15s ease-out; 
+	-moz-transition: all .15s ease-out; 
+	-o-transition: all .15s ease-out; 
+	transition: all .15s ease-out;
+}
+li[data-type="media"] .wrapper ol.data li.upload:hover,
+li[data-type="media"] .wrapper ol.data li.upload.ready
+{
+	color:#FE9400;
+	border-color:#FE9400;
+}
+li[data-type="media"] .wrapper ol.data li.upload.ready
+{
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+li[data-type="media"] .wrapper ol.data li.upload .uploadzone>p
+{
+	padding:10px;
+	font-size:13px;
+	font-family:'Gotham-Light';
+	color:#999;
+	text-align:center;
+	line-height:normal !important;
+	display:inline-block;
+	vertical-align:middle;
+}
+li[data-type="media"] .wrapper ol.data li.upload .uploadzone>p:not(.placeholder),
+li[data-type="media"] .wrapper ol.data li.upload .uploadzone>.loading
+{
+	padding:10px;
+}
+
+/********************************************************************************************/
+/* fields
+/********************************************************************************************/
+li[data-type="media"] .wrapper ol.data li
+{
+	overflow:hidden;
+}
+li[data-type="media"] .wrapper ol.data li .preview
+{
+	display:block;
+	overflow:hidden;
+}
+li[data-type="media"] .wrapper ol.data li .preview img
+{
+	display:block;
+	width:100%;
+}
+li[data-type="media"] .wrapper ol.data li .info {
+	display:none;
+}
+li[data-type="media"] .wrapper ol.data li textarea {
+	font-size:11px;
+	display:block;
+	color:#fff;
+	padding:10px;
+	position:absolute;
+	background:transparent;
+	width:100%;
+	bottom:0;
+	z-index:1;
+	border:0;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	opacity:0.4;
+	-webkit-transition: all .15s ease-out; 
+	-moz-transition: all .15s ease-out; 
+	-o-transition: all .15s ease-out; 
+	transition: all .15s ease-out;
+	height:36px;
+	line-height:16px;
+}
+li[data-type="media"] .wrapper ol.data li textarea::-webkit-input-placeholder {
+	color:#fff;
+}
+li[data-type="media"] .wrapper ol.data li textarea:-moz-placeholder {
+	color:#fff;
+}
+li[data-type="media"] .wrapper ol.data li textarea::-moz-placeholder {
+	color:#fff;
+}
+li[data-type="media"] .wrapper ol.data li textarea:-ms-input-placeholder {
+	color:#fff;
+}
+li[data-type="media"] .wrapper ol.data li:hover textarea {
+	background:rgba(0, 0, 0, 0.4);
+	opacity:1;
+}
+
+/* Errors */
+li[data-type="media"] .wrapper ol.data li.error
+{
+}
+li[data-type="media"] .wrapper ol.data li.error:before
+{
+	content:'✕';
+	color:#fff;
+	font-size:100px;
+	text-align:center;
+	width:100%;
+	line-height:100px;
+	position:absolute;
+	top:50%;
+	margin-top:-50px;
+	left:0;
+	z-index:2;
+}
+li[data-type="media"] .wrapper ol.data li.error .preview
+{
+	opacity:0.5;
+}
+li[data-type="media"] .wrapper ol.data li.error.typenotaccepted
+{
+	min-height:160px;
+}
+
+/* Only for medias: Cover! */
+li[data-type="media"][data-key="media"] .wrapper ol.data li:nth-child(2):before
+{
+	content:'cover';
+	width:100px;
+	height:15px;
+	line-height:17px;
+	font-size:9px;
+	font-family:'Gotham-Bold';
+	text-align:center;
+	position:absolute;
+	text-transform:uppercase;
+	top:15px;
+	left:-30px;
+	background:#419BF9;
+	color:#fff;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+}
+
+/********************************************************************************************/
+/* Template
+/********************************************************************************************/
+li[data-type="media"] .wrapper .template
+{
+	display:none;
+}
