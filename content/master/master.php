@@ -38,7 +38,6 @@
 /********************************************************************************************/
 //	Script
 	$_APP->bind_script('master/js/master.js');
-	$_APP->bind_script('master/js/snap.svg-min.js');
 //	css
 	$_APP->bind_css('master/css/master.css');
 	$_APP->bind_css('master/font/icomoon/style.css');
@@ -51,7 +50,6 @@
 	//	Some consts
 		var ITEM = $('meta[property=\"gc:item\"]').attr('content');
 		var SITE_URL = '".SITE_URL."';
-		var ADMIN_URL = '".ADMIN_URL."';
 		var ENV = $('body').data('env');
 	");
 
@@ -64,7 +62,7 @@
 /********************************************************************************************/
 //	Some snippets
 /********************************************************************************************/
-	$_APP->bind_snippet('meta', 'master/snippet/meta/meta');
+	$_APP->bind_snippet('meta', '_snippet/meta/meta');
 
 	$minifier = new MinifyMaster();
 ?>
